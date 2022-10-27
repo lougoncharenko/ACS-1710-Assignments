@@ -23,6 +23,13 @@ def simple_pizza_results():
         'toppings': request.args.get('toppings')
     }
     return render_template('order.html', **context)
+
+@app.route('/fact/<animal>')
+def animal_fact(animal):
+   context = {
+       'animal': animal
+   }
+   return render_template('fact.html', **context)
  
 if __name__ == '__main__':
     app.run(debug=True, port=3000)
