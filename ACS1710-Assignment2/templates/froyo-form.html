@@ -1,0 +1,27 @@
+<!--  creating a form -->
+{% extends 'base.html' %}
+
+{% block header %}
+<h1>Please fill out the form to order a froyo</h1>
+{% endblock %}
+
+
+{% block content %}
+<form action="/results" method="GET">
+    Enter your name:
+    <input type="text" name="full_name">
+    <br>
+    Email:
+    <input type="text" name="email">
+    <br>
+    Phone Number:
+    <input type="text" name="phone">
+    <br>
+    Pick a base fro-yo flavor<br/>
+    <input type="text" name="flavor"><br/>
+    Enter up to four toppings:
+    <input type="text" name="toppings">
+    <br>
+    <input type="submit" value="Submit">
+ </form>
+{% endblock %}

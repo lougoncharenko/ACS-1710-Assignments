@@ -1,0 +1,22 @@
+<!--  creating a form -->
+{% extends 'base.html' %}
+
+{% block header %}
+<h1>Please fill out the favorite form</h1>
+{% endblock %}
+
+
+{% block content %}
+<form action="/favorite_results" method="GET">
+    Enter your favorite color:
+    <input type="text" name="color">
+    <br>
+    Enter your favorite animal:
+    <input type="text" name="animal">
+    <br>
+    Enter your favorite city:
+    <input type="text" name="city">
+    <br>
+    <input type="submit" value="Submit">
+ </form>
+{% endblock %}

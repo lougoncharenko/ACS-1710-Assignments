@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<h1>Welcome to the secret layer</h1>
+{% endblock %}
+
+
+{% block content %}
+<form action="/message_results" method="POST">
+    Enter your secret message:
+    <input type="text" name="secret_message">
+    <br>
+    <input type="submit" value="Submit">
+ </form>
+{% endblock %}

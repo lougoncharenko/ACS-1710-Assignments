@@ -1,0 +1,28 @@
+<!--  creating a form -->
+{% extends 'base.html' %}
+
+{% block header %}
+<h1> Calculator Results</h1>
+{% endblock %}
+
+
+{% block content %}
+{% if operation == 'add' %}
+<p>You chose to add {{first_number}}  and {{second_number}}. Your result is: {{result}}</p>
+   
+{% elif operation == 'subtract' %}
+<p>You chose to subtract {{first_number}}  and {{second_number}}. Your result is: {{result}}</p>
+  
+{% elif operation == 'multiply' %}
+<p>You chose to multiply {{first_number}}  and {{second_number}}. Your result is: {{result}}</p>
+  
+{% elif operation == 'division' %}
+<p>You chose to divide {{first_number}}  and {{second_number}}. Your result is: {{result}}</p>
+
+{% else %}
+<p>Invalid Options! Try again!</p>
+   
+{% endif %}
+
+<a href = 'http://127.0.0.1:3000/calculator'>Go back to calculator</a>
+{% endblock %}
