@@ -9,4 +9,10 @@ Phone number: {{ users_phone }} <br><br>
 
 You ordered a {{ crust_type }} crust pizza 
 of size {{ pizza_size }}-inch
-with the following toppings: {{ toppings }}
+with the following toppings: 
+<ul>
+    {% for item in shopping_cart %}
+       <li> {{ cart}} </li>
+    {% endfor %}
+    </ul>
+    {{ toppings }}
